@@ -1,0 +1,95 @@
+% 
+% Rui Mu
+%
+% wechat:marey_marey111
+%
+% COMP9414 assignment test cases
+%
+% first function
+
+sumsq_even([],Sum).
+Sum = 120
+
+sumsq_even([1], Sum).
+Sum = 0
+
+sumsq_even([2], Sum).
+Sum = 4
+
+sumsq_even([-3,-1,1,3,5,7,9], Sum).
+Sum = 0
+
+sumsq_even([-2,0,2,4,6], Sum).
+Sum = 60
+
+sumsq_even([1,3,5,2,-4,6,8,-7], Sum).
+Sum = 120
+
+
+% second function
+same_name(pat, brian).
+false
+
+same_name(brian, darren).
+false
+
+same_name(brian, lee).
+true
+
+same_name(brian, peter).
+true
+
+same_name(albert, sandra).
+true
+
+
+% third function
+sqrt_list([],Result).
+Result = []
+
+sqrt_list([4],Result).
+Result = [[4, 2.0]]
+
+sqrt_list([0,2,289], Result).
+Result = [[0, 0.0], [2, 1.4142135623730951], [[289, 17.0]]]
+
+% forth function
+
+sign_runs([], RunList).
+RunList = []
+
+sign_runs([-1], RunList).
+RunList = [[-1]]
+
+sign_runs([-1,-1,0], RunList).
+RunList = [[-1, -1], [0]]
+
+sign_runs([-1,-1,0,0,2,2,-3,-3], RunList
+RunList = [[-1, -1], [0, 0, 2, 2], [-3, -3]]
+
+sign_runs([8,-1,-3,0,2,0,-4], RunList).
+RunList = [[8], [-1, -3], [0, 2, 0], [-4]]
+
+sign_runs([-1,-1,0,0,0,0,-1,2,2,0,0], RunList).
+RunList = [[-1, -1], [0, 0, 0, 0], [-1], [2, 2, 0, 0]]
+
+% fifth function
+is_heap(tree(empty,3,empty)).
+true
+
+is_heap(tree(empty,3,tree(empty,4,empty))).
+true
+
+is_heap(tree(empty,3,tree(empty,2,empty))).
+false
+
+is_heap(tree(tree(empty,4,empty),3,tree(empty,2,empty))).
+false
+
+is_heap(tree(tree(empty,3,empty),3,tree(empty,3,empty))).
+true
+
+is_heap(tree(tree(tree(empty,4,empty),
+         3,tree(empty,5,empty)),6,tree(tree(empty,9,empty),7,empty))).
+false
+
